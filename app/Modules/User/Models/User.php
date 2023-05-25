@@ -2,7 +2,6 @@
 
 namespace App\Modules\User\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -60,5 +59,10 @@ class User extends Authenticatable
     public function getEmail(): string
     {
         return $this->email;
+    }
+
+    public function routeNotificationForFcm()
+    {
+        return $this->getDeviceTokens();
     }
 }

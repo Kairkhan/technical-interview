@@ -196,7 +196,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // User Module
-        App\Modules\User\Providers\RegisterModuleServiceProvider::class
+        App\Modules\User\Providers\RegisterModuleServiceProvider::class,
+
+        // Notification Module
+        App\Modules\Notification\Providers\RegisterModuleServiceProvider::class,
     ],
 
     /*
